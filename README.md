@@ -12,11 +12,9 @@ VolunteerHub was developed to make it easier for people to discover and join var
 - Demo accounts and sample programmes are provided for testing.
 
 ## c. Instructions to Test Login
-
-1. Extract the ZIP file.
-2. Open the `VolunteerHub` folder.
-3. Open `index.html` using a web browser.
-4. Select **Login / Sign Up** and use one of the accounts below.
+1. Open the `VolunteerHub` folder.
+2. Open `index.html` using a web browser.
+3. Select **Login / Sign Up** and use one of the accounts below.
 
 | Role | Email | Password |
 |---|---|---|
@@ -31,7 +29,7 @@ After login, the system will open the dashboard based on the account role. You c
 
 ## d. Frameworks/Libraries Used
 
-- **HTML5** – Web page structure.
-- **CSS3** – Page layout and styling.
-- **Vanilla JavaScript** – Login, registration and dashboard functions.
-- **Browser LocalStorage** – Stores demo accounts, user data, programmes and registrations.
+- **HTML** – Web page structure.
+- **CSS** – Page layout and styling.
+- **JavaScript** – Login, registration and dashboard functions.
+- **LocalStorage** – Stores demo accounts, user data, programmes and registrations.
