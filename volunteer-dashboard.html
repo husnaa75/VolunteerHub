@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard | VolunteerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="index.html" class="brand">
+                <div class="brand-icon">V</div>
+                <span>Volunteer<span class="brand-light">Hub</span></span>
+            </a>
+
+            <p class="menu-label">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="volunteer-dashboard.html" class="nav-link active">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="Programs.html" class="nav-link">
+                    <span>Find Programs</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="login.html" class="nav-link logout-link">
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">V</div>
+                    <strong>VolunteerHub</strong>
+                </div>
+            </header>
+            <section class="welcome-banner">
+
+                <div class="welcome-content">
+
+                    <h2>Welcome back!</h2>
+
+                    <p>
+                        Every small action makes a difference.
+                        Continue your journey and make a positive impact in the community.
+                    </p>
+
+                </div>
+
+            </section>
+            <section class="summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="summary-top">
+                        <div class="summary-icon purple-icon"></div>
+                        <span class="summary-caption">All activities</span>
+                    </div>
+
+                    <h2 id="totalRegistered">0</h2>
+                    <p>Total Activities</p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-top">
+                        <div class="summary-icon orange-icon"></div>
+                        <span class="summary-caption">Awaiting response</span>
+                    </div>
+
+                    <h2 id="pendingCount">0</h2>
+                    <p>Pending Approval</p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-top">
+                        <div class="summary-icon green-icon"></div>
+                        <span class="summary-caption">Confirmed programs</span>
+                    </div>
+
+                    <h2 id="approvedCount">0</h2>
+                    <p>Approved Programs</p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-top">
+                        <div class="summary-icon blue-icon"></div>
+                        <span class="summary-caption">Completed activities</span>
+                    </div>
+
+                    <h2 id="volunteerHours">0</h2>
+                    <p>Volunteer Hours</p>
+
+                </div>
+
+            </section>
+            <section class="content-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>My Activities</h2>
+                        <p>
+                            Keep track of your program registrations and participation.
+                        </p>
+                    </div>
+
+                    <a href="Programs.html" class="text-link">
+                        Find Programs
+                    </a>
+
+                </div>
+
+                <div class="activity-toolbar">
+
+                    <div class="activity-search">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="activitySearch"
+                            placeholder="Search your activities...">
+
+                    </div>
+                    <select id="activityCategory">
+                        <option value="all">All Categories</option>
+                        <option value="Disaster Relief">Disaster Relief</option>
+                        <option value="Education">Education</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Community">Community</option>
+                    </select>
+
+                </div>
+                <div class="activity-list" id="activityList">
+                </div>
+                <div class="empty-state" id="emptyActivities" style="display: none;">
+
+                    <div class="empty-icon"></div>
+
+                    <h3>No activities found</h3>
+
+                    <p>
+                        There are no activities matching your selection.
+                    </p>
+
+                </div>
+
+            </section>
+            <section class="content-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Upcoming Programs</h2>
+                        <p>
+                            Discover more opportunities to get involved.
+                        </p>
+                    </div>
+
+                    <a href="Programs.html" class="text-link">
+                        View All Programs
+                    </a>
+
+                </div>
+
+
+                <div class="upcoming-grid">
+                    <article class="upcoming-card">
+                        <div class="program-image"><img src="image/cleanup.jpeg" alt="Community clean-up volunteering"><span class="category-tag">ENVIRONMENT</span></div>
+                        <div class="upcoming-content"><h3>Community Clean-up Day</h3><p>GreenSteps Malaysia</p><div class="upcoming-meta"><span>5 December 2026</span><span>Kota Bharu, Kelantan</span></div><a href="Programs.html" class="program-link">View Program</a></div>
+                    </article>
+                    <article class="upcoming-card">
+                        <div class="program-image"><img src="image/school.jpg" alt="Back to School Project"><span class="category-tag">EDUCATION</span></div>
+                        <div class="upcoming-content"><h3>Back to School Project</h3><p>Bright Future NGO</p><div class="upcoming-meta"><span>12 December 2026</span><span>Shah Alam, Selangor</span></div><a href="Programs.html" class="program-link">View Program</a></div>
+                    </article>
+                    <article class="upcoming-card">
+                        <div class="program-image"><img src="image/food.jpeg" alt="Food Donation Drive"><span class="category-tag">COMMUNITY</span></div>
+                        <div class="upcoming-content"><h3>Food Donation Drive</h3><p>Komuniti Prihatin Kelantan</p><div class="upcoming-meta"><span>5 December 2026</span><span>Selangor</span></div><a href="Programs.html" class="program-link">View Program</a></div>
+                    </article>
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                © 2026 VolunteerHub. Connecting people through volunteering.
+            </footer>
+
+        </main>
+
+    </div>
+    <script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/programs.js"></script>
+<script src="js/session.js"></script>
+    <script src="js/volunteer-dashboard.js"></script>
+
+</body>
+</html>

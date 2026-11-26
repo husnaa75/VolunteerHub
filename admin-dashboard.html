@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | VolunteerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+       
+        <aside class="sidebar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">V</span>
+                <span>Volunteer<span class="logo-highlight">Hub</span></span>
+            </a>
+            <p class="sidebar-heading">MAIN MENU</p>
+
+            <nav class="sidebar-menu">
+                <a href="admin-dashboard.html" class="menu-link active">
+                    Dashboard
+                </a>
+
+                <a href="management_acc.html" class="menu-link">
+                    Account Management
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <button type="button" class="logout-btn" id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="welcome-section">
+                <div>
+                    <h1>Administrator</h1>
+                </div>
+            </section>
+            <section class="summary-grid">
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <span>Total Volunteers</span>
+                        <div class="summary-icon purple"></div>
+                    </div>
+                    <h2>0</h2>
+                    <p>Registered volunteers</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <span>Total NGOs</span>
+                        <div class="summary-icon teal"></div>
+                    </div>
+                    <h2>0</h2>
+                    <p>Registered organisations</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <span>Pending Verification</span>
+                        <div class="summary-icon orange"></div>
+                    </div>
+                    <h2>0</h2>
+                    <p>NGOs waiting for approval</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-top">
+                        <span>Total Programs</span>
+                        <div class="summary-icon blue"></div>
+                    </div>
+                    <h2>0</h2>
+                    <p>Programs created by NGOs</p>
+                </div>
+
+            </section>
+            <section class="content-section" id="analytics">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PLATFORM PERFORMANCE</p>
+                        <h2>Analytics Overview</h2>
+                    </div>
+                    <span class="section-tag">Year 2026</span>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="panel chart-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Registration Overview</h3>
+                                <p>Volunteer and NGO registrations</p>
+                            </div>
+                        </div>
+
+                        <div class="chart-legend">
+                            <span><i class="legend-dot purple-dot"></i> Volunteers <strong data-chart-volunteers>0</strong></span>
+                            <span><i class="legend-dot teal-dot"></i> NGOs <strong data-chart-ngos>0</strong></span>
+                        </div>
+
+                        <div class="bar-chart">
+
+                            <div class="chart-y-axis">
+                                <span>100</span>
+                                <span>0</span>
+                            </div>
+
+                            <div class="chart-content">
+                                <div class="chart-grid-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="bar-groups">
+
+                                    <div class="bar-group" data-month="2026-06">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Jun</span>
+                                    </div>
+
+                                    <div class="bar-group" data-month="2026-07">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Jul</span>
+                                    </div>
+
+                                    <div class="bar-group" data-month="2026-08">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Aug</span>
+                                    </div>
+
+                                    <div class="bar-group" data-month="2026-09">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Sep</span>
+                                    </div>
+
+                                    <div class="bar-group" data-month="2026-10">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Oct</span>
+                                    </div>
+
+                                    <div class="bar-group" data-month="2026-11">
+                                        <div class="bars">
+                                            <div class="bar volunteer-bar" data-role="volunteer" style="height: 0%;"></div>
+                                            <div class="bar ngo-bar" data-role="ngo" style="height: 0%;"></div>
+                                        </div>
+                                        <span>Nov</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel account-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Account Overview</h3>
+                                <p>Platform user distribution</p>
+                            </div>
+                        </div>
+
+                        <div class="account-chart">
+                            <div class="donut-chart">
+                                <div class="donut-center">
+                                    <strong data-user-total>0</strong>
+                                    <small>Total Users</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="distribution-legend">
+                            <div>
+                                <span><i class="legend-dot purple-dot"></i> Volunteers <strong data-chart-volunteers>0</strong></span>
+                            </div>
+                            <div>
+                                <span><i class="legend-dot teal-dot"></i> NGOs <strong data-chart-ngos>0</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="lower-grid">
+                <div class="panel verification-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>NGO Verification</h3>
+                            <p>Organisation approval overview</p>
+                        </div>
+                    </div>
+
+                    <div class="verification-number">
+                        <strong data-pending-ngos>0</strong>
+                        <span>Pending verification requests</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill" data-verification-progress></div>
+                    </div>
+
+                    <div class="progress-labels">
+                        <span data-verified-label>0 Verified NGOs</span>
+                        <span data-pending-label>0 Pending</span>
+                    </div>
+
+                    <div class="verification-status">
+                        <div>
+                            <span class="status-dot verified-dot"></span>
+                            Verified
+                        </div>
+                        <strong data-verified-ngos>0</strong>
+                    </div>
+
+                    <div class="verification-status">
+                        <div>
+                            <span class="status-dot pending-dot"></span>
+                            Pending
+                        </div>
+                        <strong data-pending-count>0</strong>
+                    </div>
+
+                </div>
+
+                <div class="panel activity-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>Latest platform updates</p>
+                        </div>
+                    </div>
+                    <div id="recentAdminActivity"></div>
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                © 2026 VolunteerHub. All rights reserved.
+            </footer>
+
+        </main>
+
+    </div>
+
+<script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/programs.js"></script>
+<script src="js/session.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>

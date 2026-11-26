@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="top-nav">
+        <a href="admin-dashboard.html" class="logo"><span class="logo-icon">V</span><span>Volunteer<span class="logo-highlight">Hub</span></span></a>
+        <nav class="nav-links">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="management_acc.html" class="active">Account Management</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="admin-profile">
+                <div class="admin-avatar">A</div>
+                <div class="admin-info">
+                    <strong>Administrator</strong>
+                    <span>System Admin</span>
+                </div>
+            </div>
+            <a href="index.html" class="logout-btn">Log Out</a>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">ADMINISTRATION</p>
+                <h1>Account Management</h1>
+                <p>Manage NGO organisations and volunteer accounts.</p>
+            </div>
+        </section>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <div>
+                    <span>Total NGOs</span>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div>
+                    <span>Verified NGOs</span>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div>
+                    <span>Pending NGOs</span>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div>
+                    <span>Total Volunteers</span>
+                    <h2>0</h2>
+                </div>
+            </div>
+        </section>
+        <section class="account-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Manage Accounts</h2>
+                    <p>View and manage registered platform accounts.</p>
+                </div>
+            </div>
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="ngo" type="button">
+                    NGO Management
+                    <span class="tab-count">0</span>
+                </button>
+
+                <button class="tab-btn" data-tab="volunteer" type="button">
+                    Volunteer Management
+                    <span class="tab-count">0</span>
+                </button>
+            </div>
+            <div class="tab-content active" id="ngo">
+
+                <div class="content-heading">
+                    <div>
+                        <h3>Registered NGOs</h3>
+                        <p>Review organisation details and verification status.</p>
+                    </div>
+
+                    <span class="total-label">0 Organisations</span>
+                </div>
+
+                <div class="toolbar">
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input type="text" id="ngoSearch"
+                            placeholder="Search NGO name or email...">
+                    </div>
+
+                    <select id="ngoStatusFilter">
+                        <option value="all">All Status</option>
+                        <option value="verified">Verified</option>
+                        <option value="pending">Pending</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <div class="table-responsive">
+                    <table id="ngoTable">
+                        <thead>
+                            <tr>
+                                <th>Organisation</th>
+                                <th>Email Address</th>
+                                <th>Registration Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="empty-message" id="ngoEmpty" hidden>
+                    No NGO accounts found.
+                </p>
+
+            </div>
+
+            <div class="tab-content" id="volunteer">
+
+                <div class="content-heading">
+                    <div>
+                        <h3>Registered Volunteers</h3>
+                        <p>View and manage volunteer account information.</p>
+                    </div>
+
+                    <span class="total-label">0 Volunteers</span>
+                </div>
+
+                <div class="toolbar">
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input type="text" id="volunteerSearch"
+                            placeholder="Search volunteer name or email...">
+                    </div>
+
+                    <select id="volunteerStatusFilter">
+                        <option value="all">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table id="volunteerTable">
+                        <thead>
+                            <tr>
+                                <th>Volunteer</th>
+                                <th>Email Address</th>
+                                <th>Location</th>
+                                <th>Registration Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="empty-message" id="volunteerEmpty" hidden>
+                    No volunteer accounts found.
+                </p>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <p>© 2026 VolunteerHub. All rights reserved.</p>
+        </footer>
+
+    </main>
+<script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/session.js"></script>
+<script src="js/account-management.js"></script>
+</body>
+</html>

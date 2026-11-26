@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerHub | Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-main">
+        <div class="auth-container">
+            <section class="auth-intro">
+                <h1>
+                    Be the reason
+                    <span>someone smiles.</span>
+                </h1>
+                <p>
+                    Join VolunteerHub and discover opportunities to help
+                    communities, support meaningful causes and create
+                    positive changes together.
+                </p>
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <i class="bi bi-search"></i>
+                        <div>
+                            <h3>Find Volunteer Opportunities</h3>
+                            <p>Discover programs that match your interests.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-people"></i>
+                        <div>
+                            <h3>Connect with NGOs</h3>
+                            <p>Meet organisations and people with similar goals.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-award"></i>
+                        <div>
+                            <h3>Make an Impact</h3>
+                            <p>Take part in activities that benefit the community.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-quote">
+                    "Small acts, when multiplied by many people,
+                    can make a big difference."
+                </div>
+            </section>
+            <section class="auth-card">
+                <div class="auth-card-heading">
+                    <h2>Welcome to VolunteerHub</h2>
+                    <p>Login or create an account to get started.</p>
+                </div>
+                <div class="auth-tabs">
+                    <button type="button" id="tab-login" class="active">
+                        Login
+                    </button>
+                    <button type="button" id="tab-signup">
+                        Sign Up
+                    </button>
+                </div>
+                <form id="loginForm">
+                    <div id="loginAlert" class="alert" style="display:none;"></div>
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPass">Password</label>
+                        <div class="password-field">
+                            <input
+                                type="password"
+                                id="loginPass"
+                                placeholder="Enter your password"
+                                required>
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="loginPasswordToggle">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit">
+                        Login
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p class="auth-switch">
+                        Don't have an account?
+                        <a href="#" id="goToSignup">Sign Up</a>
+                    </p>
+
+                </form>
+
+                <form id="signupForm" style="display:none;">
+
+                    <div id="signupAlert" class="alert" style="display:none;"></div>
+                    <div class="form-group">
+                        <label for="role">Register As</label>
+
+                        <select id="role" required>
+                            <option value="">Select account type</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="ngo">NGO</option>
+                        </select>
+
+                        <small id="roleHint" class="role-hint">
+                            Choose the type of account you want to create.
+                        </small>
+                    </div>
+
+                    <div id="volFields" style="display:none;">
+
+                        <div class="form-group">
+                            <label for="vName">Full Name</label>
+                            <input
+                                type="text"
+                                id="vName"
+                                placeholder="Enter your full name"
+                            >
+                            <small id="errVName" class="form-error"></small>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="vDob">Date of Birth</label>
+                                <input type="date" id="vDob">
+                                <small id="errVDob" class="form-error"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="vGender">Gender</label>
+                                <select id="vGender">
+                                    <option value="">Select gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vCountry">Country</label>
+                            <select id="vCountry" required></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vState">State / Province / Region</label>
+                            <select id="vState"></select>
+                            <input type="text" id="vStateOther" placeholder="Enter state, province or region" style="display:none;">
+                            <small id="errVState" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vEmail">Email Address</label>
+                            <input
+                                type="email"
+                                id="vEmail"
+                                placeholder="Enter your email"
+                            >
+                            <small id="errVEmail" class="form-error"></small>
+                        </div>
+
+                    </div>
+
+                    <div id="ngoFields" style="display:none;">
+
+                        <div class="form-group">
+                            <label for="nName">Organisation Name</label>
+                            <input
+                                type="text"
+                                id="nName"
+                                placeholder="Enter organisation name"
+                            >
+                            <small id="errNName" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nEmail">Official Organisation Email</label>
+                            <input
+                                type="email"
+                                id="nEmail"
+                                placeholder="Enter organisation email"
+                            >
+                            <small id="errNEmail" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nSsm">Registration Number (SSM or equivalent)</label>
+                            <input
+                                type="text"
+                                id="nSsm"
+                                placeholder="Enter registration number"
+                            >
+                            <small id="errNSsm" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nCountry">Country</label>
+                            <select id="nCountry" required></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nState">State / Province / Region</label>
+                            <select id="nState"></select>
+                            <input type="text" id="nStateOther" placeholder="Enter state, province or region" style="display:none;">
+                            <small id="errNState" class="form-error"></small>
+                        </div>
+
+                    </div>
+
+                    <div id="commonFields" style="display:none;">
+
+                        <div class="form-group">
+                            <label for="contact">Contact Number</label>
+                            <input
+                                type="tel"
+                                id="contact"
+                                placeholder="e.g. 0123456789"
+                            >
+                            <small id="errContact" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+
+                            <div class="password-field">
+                                <input
+                                    type="password"
+                                    id="pass"
+                                    placeholder="Create a password"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passPasswordToggle"
+                                >
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+
+                            <small id="errPass" class="form-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pass2">Confirm Password</label>
+
+                            <div class="password-field">
+                                <input
+                                    type="password"
+                                    id="pass2"
+                                    placeholder="Confirm your password"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="pass2PasswordToggle"
+                                >
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+
+                            <small id="errPass2" class="form-error"></small>
+                        </div>
+
+                        <button type="submit" class="auth-submit" id="signupBtn">
+                            Create Account
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                    <p class="auth-switch">
+                        Already have an account?
+                        <a href="#" id="goToLogin">Login</a>
+                    </p>
+                </form>
+            </section>
+        </div>
+    </main>
+<script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/auth.js?v=20261126b"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Dashboard | VolunteerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">V</div>
+            <div>
+                <h2>Volunteer<span>Hub</span></h2>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MENU</div>
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="myvolunteer.html" class="nav-link">
+                My Volunteers
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout-link">
+                </span> Log Out
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+        <section class="welcome-banner">
+            <div class="welcome-text">
+                <span class="welcome-tag">NGO DASHBOARD</span>
+                <h2>Make every volunteer hour count.</h2>
+                <p>
+                    Manage your programs, connect with volunteers and
+                    make a positive impact in the community.
+                </p>
+            </div>
+        </section>
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>My Active Programs</p>
+                <h2>0</h2>
+                <small>Programs currently available</small>
+            </div>
+
+            <div class="stat-card">
+                <p>My Volunteers</p>
+                <h2>0</h2>
+                <small>Total volunteers joined</small>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending Applications</p>
+                <h2>0</h2>
+                <small>Waiting for your response</small>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed Programs</p>
+                <h2>0</h2>
+                <small>Successfully completed</small>
+            </div>
+
+        </section>
+
+        <section class="content-section" id="organisation-profile">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">ORGANISATION DETAILS</span>
+                    <h2>Organisation Profile</h2>
+                    <p>View and update your NGO information.</p>
+                </div>
+            </div>
+
+            <div class="organisation-card">
+
+                <div class="organisation-header">
+                    <div class="organisation-logo" data-org-initials>NGO</div>
+                    <div>
+                        <h3 data-org-name>My Organisation</h3>
+                        <p data-org-type>NGO Account</p>
+                        <span class="verified-badge">✓ Verified Organisation</span>
+                    </div>
+                </div>
+
+                <div class="organisation-info-grid">
+                    <div class="info-item">
+                        <small>Organisation Email</small>
+                        <strong data-org-email>Not provided</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Contact Number</small>
+                        <strong data-org-contact>Not provided</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>Registration Number</small>
+                        <strong data-org-ssm>Not provided</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <small>State</small>
+                        <strong data-org-state>Not provided</strong>
+                    </div>
+
+                    <div class="info-item full-info">
+                        <small>Organisation Address</small>
+                        <strong data-org-address>Not provided</strong>
+                    </div>
+
+                    <div class="info-item full-info">
+                        <small>About Organisation</small>
+                        <strong data-org-about>Not provided</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-section" id="my-programs">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">PROGRAM MANAGEMENT</span>
+                    <h2>My Programs</h2>
+                    <p>Create and manage your volunteer programs.</p>
+                </div>
+
+                <a href="#add-program" class="primary-btn">
+                    + Add Program
+                </a>
+            </div>
+
+        <details class="add-program-box" id="add-program">
+
+            <summary>+ Create a new program</summary>
+
+            <form class="program-form" id="programForm" action="#" method="post">
+
+                <input type="hidden" id="editingProgramId">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="programName">Program Name</label>
+                        <input
+                            type="text"
+                            id="programName"
+                            placeholder="Enter program name"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="programCategory">Category</label>
+
+                        <select id="programCategory" required>
+                            <option value="">Select category</option>
+                            <option>Environment</option>
+                            <option>Education</option>
+                            <option>Community</option>
+                            <option>Health</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="programDate">Program Date</label>
+                        <input
+                            type="date"
+                            id="programDate"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="programLocation">Location</label>
+                        <input
+                            type="text"
+                            id="programLocation"
+                            placeholder="Enter location"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="programImage">Program Image</label>
+                        <input
+                            type="file"
+                            id="programImage"
+                            accept="image/*"
+                            required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="programDescription">Description</label>
+
+                    <textarea
+                        id="programDescription"
+                        rows="3"
+                        placeholder="Describe your program"
+                        required></textarea>
+                </div>
+
+
+                <button type="submit" class="primary-btn" id="saveProgramBtn">
+                    Save Program
+                </button>
+
+                <button
+                    type="button"
+                    class="outline-btn"
+                    id="cancelEditBtn"
+                    hidden>
+                    Cancel Edit
+                </button>
+
+            </form>
+
+        </details>
+
+        <div class="program-grid" id="ngoProgramGrid"></div>
+
+        <footer class="footer">
+            <p>© 2026 VolunteerHub. All rights reserved.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/programs.js"></script>
+<script src="js/session.js"></script>
+<script src="js/ngo-dashboard.js"></script>
+</body>
+</html>

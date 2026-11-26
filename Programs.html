@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Programs | VolunteerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="nav">
+
+        <input type="checkbox" id="navToggle">
+
+        <div class="nav-container">
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Programs.html" class="active">Find Programs</a>
+                <a href="index.html">About Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-link">Log In</a>
+                <a href="login.html" class="nav-button">Sign Up</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="program-list-section section" id="programs">
+
+        <div class="container">
+
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">EXPLORE AND PARTICIPATE</span>
+
+                    <h2>
+                        Available
+                        <em>Programs.</em>
+                    </h2>
+
+                    <p class="program-intro">
+                        Browse the available programs and choose
+                        an activity that interests you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="search-filter">
+
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+
+                    <input type="text" id="searchInput" placeholder="Search programs...">
+                </div>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Community">Community</option>
+                    <option value="Education">Education</option>
+                    <option value="Environment">Environment</option>
+                </select>
+
+                <select id="locationFilter">
+                    <option value="all">All Locations</option>
+                    <option value="Kelantan">Kelantan</option>
+                    <option value="Selangor">Selangor</option>
+                </select>
+
+                <select id="sortFilter">
+                    <option value="default">Sort By</option>
+                    <option value="name">Program Name</option>
+                </select>
+
+            </div>
+
+            <div class="category-list">
+
+                <button class="category-chip active" data-category="all">
+                    All Programs
+                </button>
+
+                <button class="category-chip" data-category="Community">
+                    Community
+                </button>
+
+                <button class="category-chip" data-category="Education">
+                    Education
+                </button>
+
+                <button class="category-chip" data-category="Environment">
+                    Environment
+                </button>
+
+            </div>
+
+            <div class="program-grid" id="programGrid">
+            </div>
+
+        </div>
+
+    </section>
+    <script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/programs.js"></script>
+</body></html>

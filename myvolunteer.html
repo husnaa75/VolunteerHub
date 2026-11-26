@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Volunteers | VolunteerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard-layout">
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+            <span class="brand-icon">V</span>
+            <span>Volunteer<span>Hub</span></span>
+        </a>
+        <nav class="sidebar-nav">
+
+            <a href="ngo-dashboard.html" class="nav-link">
+                <span>Dashboard</span>
+            </a>
+
+            <a href="myvolunteer.html" class="nav-link active">
+                <span>My Volunteers</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="login.html" class="logout-link">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">NGO Workspace / My Volunteers</p>
+                <h1>My Volunteers</h1>
+            </div>
+
+            <div class="topbar-right">
+
+                <span class="verified-status">
+                    <span class="icon-glyph" aria-hidden="true">✓</span>
+                    Verified Organisation
+                </span>
+
+                <div class="topbar-avatar">GS</div>
+
+            </div>
+
+        </header>
+
+        <div class="page-content">
+            <section class="page-intro">
+
+                <div>
+                    <h2>Manage Your Volunteers</h2>
+
+                    <p>
+                        View volunteer registrations and manage applications
+                        for programs organised by your organisation.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="summary-grid">
+
+                <div class="summary-card">
+                    <div class="summary-icon purple">
+                        <span class="icon-glyph" aria-hidden="true">♧</span>
+                    </div>
+
+                    <div>
+                        <span>Total Registrations</span>
+                        <h3>0</h3>
+                        <small>Across all programs</small>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon orange">
+                        <span class="icon-glyph" aria-hidden="true">◷</span>
+                    </div>
+
+                    <div>
+                        <span>Pending Approval</span>
+                        <h3>0</h3>
+                        <small>Awaiting your decision</small>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon green">
+                        <span class="icon-glyph" aria-hidden="true">✓</span>
+                    </div>
+
+                    <div>
+                        <span>Approved Volunteers</span>
+                        <h3>0</h3>
+                        <small>Successfully approved</small>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon red">
+                        <span class="icon-glyph" aria-hidden="true">×</span>
+                    </div>
+
+                    <div>
+                        <span>Rejected Applications</span>
+                        <h3>0</h3>
+                        <small>Not approved</small>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="program-overview">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Program Registrations</h2>
+                        <p>Select a program to view its registered volunteers.</p>
+                    </div>
+
+                    <span class="program-count">3 Programs</span>
+                </div>
+
+                <div class="program-selector">
+
+                    <button class="program-tab active"
+                        onclick="showProgram('program1', this)">
+
+                        <div class="tab-icon environment">
+                            <span class="icon-glyph" aria-hidden="true">♣</span>
+                        </div>
+
+                        <div class="tab-info">
+                            <strong>Community Clean-up Day</strong>
+                            <span>5 December 2026</span>
+                        </div>
+
+                        <span class="tab-number">20</span>
+
+                    </button>
+
+                    <button class="program-tab"
+                        onclick="showProgram('program2', this)">
+
+                        <div class="tab-icon education">
+                            <span class="icon-glyph" aria-hidden="true">▤</span>
+                        </div>
+
+                        <div class="tab-info">
+                            <strong>Back to School Project</strong>
+                            <span>12 December 2026</span>
+                        </div>
+
+                        <span class="tab-number">15</span>
+
+                    </button>
+
+                    <button class="program-tab"
+                        onclick="showProgram('program3', this)">
+
+                        <div class="tab-icon community">
+                            <span class="icon-glyph" aria-hidden="true">♡</span>
+                        </div>
+
+                        <div class="tab-info">
+                            <strong>Food Donation Drive</strong>
+                            <span>5 December 2026</span>
+                        </div>
+
+                        <span class="tab-number">13</span>
+
+                    </button>
+
+                </div>
+            </section>
+
+            <section class="registration-section">
+
+                <div class="section-heading registration-heading">
+
+                    <div>
+                        <h2 id="selectedProgramTitle">
+                            Community Clean-up Day
+                        </h2>
+
+                        <p id="selectedProgramDate">
+                            5 December 2026 · Jeli, Kelantan
+                        </p>
+                    </div>
+
+                    <span class="program-status">
+                        <span class="icon-glyph" aria-hidden="true">▣</span>
+                        Upcoming Program
+                    </span>
+
+                </div>
+
+                <div class="table-toolbar">
+
+                    <div class="search-box">
+                        <span class="icon-glyph" aria-hidden="true">⌕</span>
+
+                        <input
+                            type="text"
+                            id="searchVolunteer"
+                            placeholder="Search volunteer name or email..."
+                            oninput="filterVolunteers()"
+                        >
+                    </div>
+
+                    <select id="statusFilter" onchange="filterVolunteers()">
+                        <option value="all">All Status</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Volunteer</th>
+                                <th>Email</th>
+                                <th>Registration Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="volunteerTable">
+                        </tbody>
+
+                    </table>
+                    <div class="empty-state" id="emptyState" style="display:none;">
+                        <span class="icon-glyph" aria-hidden="true">♧</span>
+                        <h3>No Volunteers Found</h3>
+                        <p>Try changing your search or filter.</p>
+                    </div>
+
+                </div>
+
+                <div class="table-footer">
+                    <span id="resultCount">Showing 5 registrations</span>
+                    <span>Registration records for selected program</span>
+                </div>
+
+            </section>
+
+            <section class="info-note">
+
+                <div class="info-icon">
+                    <span class="icon-glyph" aria-hidden="true">i</span>
+                </div>
+
+                <div>
+                    <strong>Volunteer Approval Information</strong>
+
+                    <p>
+                        Volunteers can check their registration status in the My Activities page after the NGO reviews their application.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="js/demo-seed.js?v=20261126c"></script>
+    <script src="js/programs.js"></script>
+<script src="js/session.js"></script>
+<script src="js/myvolunteer.js"></script>
+</body>
+</html>
